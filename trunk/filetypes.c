@@ -1,12 +1,11 @@
 # For complete documentation of this file, please see Geany's main documentation
 [styling]
+# foreground;background;bold;italic
 
-# General Text stylings
+# Both this and the Java file have very, very similar stylings.  I'm not sure if we could finagle it,
+# but it would be nice to incorporate something similar to filetypes.xml.
 
 default=0xf1f1f1;0x0F2C3A;false;false
-comment=0xD3DEE2;0x0F2C3A;false;false
-commentline=0x85DFFF;0x0F2C3A;false;false
-commentdoc=0x85DFFF;0x0F2C3A;false;false
 number=0x7ECDFF;0x0F2C3A;false;false
 string=0xC4E6FA;0x0F2C3A;false;false
 stringeol=0xF1F1F1;0x0F2C3A;false;false
@@ -14,11 +13,14 @@ character=0xC4E6FA;0x0F2C3A;false;false
 operator=0x6F92A2;0x0F2C3A;true;false
 identifier=0xF1F1F1;0x0F2C3A;false;false
 
-#Javadoc specific stylings
+#Comment specific stylings
 
 commentlinedoc=0x85DFFF;0x0F2C3A;false;false
 commentdockeyword=0x85DFFF;0x0F2C3A;false;true
 commentdockeyworderror=0x85DFFF;0x0F2C3A;false;false
+comment=0xD3DEE2;0x0F2C3A;false;false
+commentline=0x85DFFF;0x0F2C3A;false;false
+commentdoc=0x85DFFF;0x0F2C3A;false;false
 
 # Keyword stylings
 
@@ -28,7 +30,7 @@ word=0x99CBFF;0x0F2C3A;false;false
 
 word2=0xC7C7C7;0x0F2C3A;false;false
 
-# Java class stylings
+# Class stylings
 
 globalclass=0x56BFF2;0x0F2C3A;true;false
 
@@ -42,8 +44,8 @@ styling_within_preprocessor=1;0;false;false
 
 [keywords]
 # all items must be in one line
-primary=abstract assert break case catch class const continue default do else extends final finally for future generic goto if implements import inner instanceof interface native new outer package private protected public rest return static super switch synchronized this throw throws transient try var volatile while true false null
-secondary=boolean byte char double float int long short void String Vector
+primary=volatile default export goto sizeof typename asm enum bool union NULL FALSE TRUE typedef struct char int float double void unsigned signed long short extern static register auto const if else switch for while do break continue return class new delete inline case
+
 docComment=attention author brief bug class code date def enum example exception file fn namespace note param remarks return see since struct throw todo typedef var version warning union
 
 [settings]
@@ -69,5 +71,7 @@ context_action_cmd=
 # %f will be replaced by the complete filename
 # %e will be replaced by the filename without extension
 # (use only one of it at one time)
-compiler=javac "%f"
-run_cmd=java "%e"
+compiler=gcc -Wall -c "%f"
+# the -o option is automatically added by Geany
+linker=gcc -Wall "%f"
+run_cmd="./%e"
