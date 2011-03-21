@@ -27,7 +27,7 @@ word2=0x96ADBC;0x0F2C3A;true;false
 
 classname=0x56BFF2;0x0F2C3A;true;false
 defname=0xCEEBFF;0x0F2C3A;false;false
-keyword=0x4FE846;0x0F2C3A;false;false
+keyword=0xD6D6D6;0x0F2C3A;false;false
 identifier=0xF1F1F1;0x0F2C3A;false;false
 decorator=0x74929F;0x0F2C3A;false;false
 
