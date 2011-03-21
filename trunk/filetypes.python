@@ -1,0 +1,72 @@
+# For complete documentation of this file, please see Geany's main documentation
+[styling]
+# General Text stylings
+
+default=0xf1f1f1;0x0F2C3A;false;false
+number=0x7ECDFF;0x0F2C3A;false;false
+string=0xC4E6FA;0x0F2C3A;false;false
+character=0xC4E6FA;0x0F2C3A;false;false
+triple=0xC4E6FA;0x0F2C3A;false;false
+tripledouble=0xC4E6FA;0x0F2C3A;false;false
+stringeol=0xf1f1f1;0x0F2C3A;false;false
+
+#Comment stylings
+
+commentline=0xD3DEE2;0x0F2C3A;false;false
+commentblock=0x85DFFF;0x0F2C3A;false;false
+
+#Operator (non-functional) stylings
+#word1 controls the actual keywords.
+#word2 controls the specific non-functional operators such as "None" and the __functions__, as well as the names of some classes.
+
+operator=0x6F92A2;0x0F2C3A;true;false
+word=0x99CBFF;0x0F2C3A;false;false
+word2=0x96ADBC;0x0F2C3A;true;false
+
+# Function and Class stylings
+
+classname=0x56BFF2;0x0F2C3A;true;false
+defname=0xCEEBFF;0x0F2C3A;false;false
+keyword=0x4FE846;0x0F2C3A;false;false
+identifier=0xF1F1F1;0x0F2C3A;false;false
+decorator=0x74929F;0x0F2C3A;false;false
+
+
+[keywords]
+# all items must be in one line
+# added isinstance & self to the original
+primary=and as assert break class continue def del elif else except exec finally for from global if import in is lambda not or pass print raise return try while with yield False None True isinstance self
+#secondary=False None True isinstance self
+
+
+[settings]
+# default extension used when saving files
+#extension=py
+
+# default resource display mode - 0 for "by name", 1 for "by location"
+symbol_list_sort_mode=1
+
+# the following characters are these which a "word" can contains, see documentation
+#wordchars=_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+
+# if only single comment char is supported like # in this file, leave comment_close blank
+comment_open=#
+comment_close=
+
+# set to false if a comment character/string should start at column 0 of a line, true uses any
+# indentation of the line, e.g. setting to true causes the following on pressing CTRL+d
+	#command_example();
+# setting to false would generate this
+#	command_example();
+# This setting works only for single line comments
+comment_use_indent=true
+
+# context action command (please see Geany's main documentation for details)
+context_action_cmd=
+
+[build_settings]
+# %f will be replaced by the complete filename
+# %e will be replaced by the filename without extension
+# (use only one of it at one time)
+compiler=python -c "import py_compile; py_compile.compile('%f')"
+run_cmd=python "%f"
