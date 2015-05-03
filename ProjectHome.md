@@ -1,0 +1,1 @@
+This project attempts to create a readable, blue theme for Geany users.
